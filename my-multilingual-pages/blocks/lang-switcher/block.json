@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mmp/lang-switcher",
+	"version": "1.0.0",
+	"title": "言語スイッチャー",
+	"category": "widgets",
+	"icon": "translation",
+	"description": "多言語翻訳プラグインの言語切り替えブロック",
+	"keywords": [ "language", "multilingual", "switcher", "翻訳", "言語" ],
+	"supports": {
+		"html": false,
+		"align": [ "left", "center", "right" ]
+	},
+	"attributes": {
+		"style": {
+			"type": "string",
+			"default": "list"
+		},
+		"showInactive": {
+			"type": "boolean",
+			"default": false
+		},
+		"showFlags": {
+			"type": "boolean",
+			"default": true
+		},
+		"showNames": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "my-multilingual-pages",
+	"editorScript": "file:../js/lang-switcher-editor.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,126 @@
+# Copyright (C) 2024 Your Name
+# This file is distributed under the same license as the My Multilingual Pages plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: My Multilingual Pages 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-admin-settings.php
+msgid "多言語翻訳設定"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "多言語翻訳"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "検証中..."
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "✓ 有効なAPIキーです"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "✗ 無効なAPIキーです"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "権限がありません"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "有効なAPIキーです"
+msgstr ""
+
+#: includes/class-admin-settings.php
+msgid "無効なAPIキーです"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "翻訳ページを作成中..."
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "翻訳ページを作成しました"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "エラーが発生しました"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "この言語の翻訳ページを作成しますか？"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "言語:"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "マスター"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "→ 元ページ"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "翻訳ページ"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "ページを作成"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "未作成"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "要更新"
+msgstr ""
+
+#: includes/class-admin-metabox.php
+msgid "編集"
+msgstr ""
+
+#: includes/class-admin-dashboard.php
+msgid "多言語翻訳状況"
+msgstr ""
+
+#: includes/class-admin-dashboard.php
+msgid "翻訳済み"
+msgstr ""
+
+#: includes/class-admin-dashboard.php
+msgid "未翻訳"
+msgstr ""
+
+#: includes/class-admin-columns.php
+msgid "言語"
+msgstr ""
+
+#: includes/class-admin-columns.php
+msgid "翻訳状況"
+msgstr ""
+
+#: includes/class-admin-columns.php
+msgid "すべての言語"
+msgstr ""
+
+#: includes/class-frontend.php
+msgid "言語選択"
+msgstr ""
+
+#: includes/class-plugin.php
+msgid "Every 5 Minutes"
+msgstr ""

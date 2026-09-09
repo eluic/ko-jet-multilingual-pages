@@ -1,0 +1,116 @@
+/**
+ * メタボックス用CSS
+ *
+ * @package MyMultilingualPages
+ */
+
+.mmp-metabox-content {
+	padding: 4px 0;
+}
+
+.mmp-current-lang {
+	margin-bottom: 12px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.mmp-badge {
+	display: inline-block;
+	padding: 1px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.mmp-badge-master {
+	background: #d63638;
+	color: #fff;
+}
+
+.mmp-notice {
+	margin: 8px 0;
+	padding: 8px 12px;
+	border-radius: 3px;
+}
+
+.mmp-notice-warning {
+	background: #fff3cd;
+	border-left: 4px solid #dba617;
+	color: #856404;
+}
+
+.mmp-translations-list {
+	margin: 12px 0;
+}
+
+.mmp-translations-list h4 {
+	margin: 0 0 8px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #646970;
+}
+
+.mmp-translation-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.mmp-translation-row:last-child {
+	border-bottom: none;
+}
+
+.mmp-lang-name {
+	flex: 1;
+	font-size: 13px;
+}
+
+.mmp-status-badge {
+	display: inline-block;
+	padding: 1px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.mmp-status-ok {
+	background: #d4edda;
+	color: #155724;
+}
+
+.mmp-status-warning {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.mmp-status-none {
+	background: #f0f0f1;
+	color: #646970;
+}
+
+.mmp-edit-link {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.mmp-update-mode {
+	margin-top: 12px;
+	padding-top: 8px;
+	border-top: 1px solid #dcdcde;
+}
+
+.mmp-update-mode h4 {
+	margin: 0 0 6px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #646970;
+}
+
+/* AJAX 操作中の表示 */
+.mmp-creating {
+	opacity: 0.6;
+	pointer-events: none;
+}

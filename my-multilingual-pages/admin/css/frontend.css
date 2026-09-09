@@ -1,0 +1,89 @@
+/**
+ * フロントエンド言語スイッチャー用CSS
+ *
+ * @package MyMultilingualPages
+ */
+
+/* 共通 */
+.mmp-lang-switcher {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+/* リスト形式 */
+.mmp-lang-switcher--list .mmp-lang-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mmp-lang-switcher--list .mmp-lang-item {
+	padding: 4px 0;
+}
+
+.mmp-lang-switcher--list .mmp-lang-item a {
+	text-decoration: none;
+	color: #2271b1;
+	transition: color 0.2s;
+}
+
+.mmp-lang-switcher--list .mmp-lang-item a:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+.mmp-lang-switcher--list .mmp-lang-current span {
+	font-weight: 700;
+}
+
+.mmp-lang-switcher--list .mmp-lang-inactive span {
+	color: #999;
+	font-style: italic;
+}
+
+/* インライン形式 */
+.mmp-lang-switcher--inline .mmp-lang-list {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+.mmp-lang-switcher--inline .mmp-lang-item {
+	display: inline;
+}
+
+.mmp-lang-switcher--inline .mmp-lang-item::after {
+	content: ' | ';
+	color: #ccc;
+}
+
+.mmp-lang-switcher--inline .mmp-lang-item:last-child::after {
+	content: '';
+}
+
+.mmp-lang-switcher--inline .mmp-lang-item a {
+	text-decoration: none;
+	color: #2271b1;
+}
+
+.mmp-lang-switcher--inline .mmp-lang-item a:hover {
+	text-decoration: underline;
+}
+
+.mmp-lang-switcher--inline .mmp-lang-current span {
+	font-weight: 700;
+}
+
+/* ドロップダウン形式 */
+.mmp-lang-dropdown {
+	padding: 6px 12px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.mmp-lang-dropdown:hover {
+	border-color: #2271b1;
+}

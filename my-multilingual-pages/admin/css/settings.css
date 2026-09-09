@@ -1,0 +1,33 @@
+/**
+ * 設定ページ用CSS
+ *
+ * @package MyMultilingualPages
+ */
+
+.mmp-lang-settings-table {
+	margin-top: 10px;
+	max-width: 600px;
+}
+
+.mmp-lang-settings-table th,
+.mmp-lang-settings-table td {
+	padding: 8px 12px;
+}
+
+.mmp-key-status {
+	display: inline-block;
+	margin-left: 8px;
+	font-weight: 600;
+}
+
+.mmp-key-status.mmp-key-valid {
+	color: #00a32a;
+}
+
+.mmp-key-status.mmp-key-invalid {
+	color: #d63638;
+}
+
+.mmp-key-status.mmp-key-checking {
+	color: #dba617;
+}
