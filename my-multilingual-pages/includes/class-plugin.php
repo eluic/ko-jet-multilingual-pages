@@ -32,17 +32,17 @@ class Plugin {
 	/** @var Translation_Queue */
 	private Translation_Queue $translation_queue;
 
-	/** @var Admin_Settings */
-	private Admin_Settings $admin_settings;
+	/** @var Admin_Settings|null */
+	private ?Admin_Settings $admin_settings = null;
 
-	/** @var Admin_Metabox */
-	private Admin_Metabox $admin_metabox;
+	/** @var Admin_Metabox|null */
+	private ?Admin_Metabox $admin_metabox = null;
 
-	/** @var Admin_Columns */
-	private Admin_Columns $admin_columns;
+	/** @var Admin_Columns|null */
+	private ?Admin_Columns $admin_columns = null;
 
-	/** @var Admin_Dashboard */
-	private Admin_Dashboard $admin_dashboard;
+	/** @var Admin_Dashboard|null */
+	private ?Admin_Dashboard $admin_dashboard = null;
 
 	/** @var Frontend */
 	private Frontend $frontend;
@@ -68,8 +68,8 @@ class Plugin {
 		$this->translation_sync   = new Translation_Sync( $this->language_manager, $this->translator_factory );
 		$this->translation_queue  = new Translation_Queue( $this->translation_sync );
 
-		// 管理画面コンポーネント.
-		if ( is_admin() ) {
+		// 管理画面コンポーネント（AJAX リクエスト含む）.
+		if ( is_admin() || wp_doing_ajax() ) {
 			$this->admin_settings  = new Admin_Settings( $this->language_manager, $this->translator_factory );
 			$this->admin_metabox   = new Admin_Metabox( $this->language_manager, $this->translator_factory );
 			$this->admin_columns   = new Admin_Columns( $this->language_manager );
@@ -143,11 +143,17 @@ class Plugin {
 	/**
 	 * AJAX ハンドラーの登録.
 	 *
+	 * 管理画面またはAJAXリクエスト時のみ登録する.
+	 *
 	 * @return void
 	 */
 	private function register_ajax_handlers(): void {
-		add_action( 'wp_ajax_mmp_create_translation', array( $this->admin_metabox, 'ajax_create_translation' ) );
-		add_action( 'wp_ajax_mmp_validate_api_key', array( $this->admin_settings, 'ajax_validate_api_key' ) );
+		if ( null !== $this->admin_metabox ) {
+			add_action( 'wp_ajax_mmp_create_translation', array( $this->admin_metabox, 'ajax_create_translation' ) );
+		}
+		if ( null !== $this->admin_settings ) {
+			add_action( 'wp_ajax_mmp_validate_api_key', array( $this->admin_settings, 'ajax_validate_api_key' ) );
+		}
 		add_action( 'wp_ajax_mmp_sync_translation', array( $this->translation_sync, 'ajax_sync_translation' ) );
 	}
 
